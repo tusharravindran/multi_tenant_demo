@@ -11,7 +11,9 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+  config.hosts.clear # allow all subdomains
 
+  
   # Enable server timing.
   config.server_timing = true
 

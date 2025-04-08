@@ -1,2 +1,5 @@
 class Account < ApplicationRecord
-end
+    has_many :users
+    has_many :projects
+  end
+  

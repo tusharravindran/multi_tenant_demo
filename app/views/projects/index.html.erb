@@ -1,0 +1,14 @@
+<h1>Projects for <%= ActsAsTenant.current_tenant&.name %></h1>
+
+<% if @projects.any? %>
+  <ul>
+    <% @projects.each do |project| %>
+      <li>
+        <%= link_to project.name, project_path(project), style: "color: #0066cc;" %><br>
+        <p style="font-size: 0.9em; color: #555;"><%= project.description %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No projects found for this account.</p>
+<% end %>

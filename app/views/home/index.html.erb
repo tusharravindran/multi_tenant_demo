@@ -1,0 +1,8 @@
+<h1>Available Accounts</h1>
+<ul>
+  <% Account.all.each do |account| %>
+    <li>
+    <%= link_to account.name, tenant_root_url(subdomain: account.subdomain) %>
+    </li>
+  <% end %>
+</ul>
